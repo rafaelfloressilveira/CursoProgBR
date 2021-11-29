@@ -1,7 +1,6 @@
-# Projeto Páginad e Captura
+# Projeto Página de Captura
 
-Aplicando os conceitos de HTML e CSS
-Projeto acompanhado pela aula
+Aplicando os conceitos de HTML e CSS - Projeto acompanhado pela aula
 
 # Desafio do Projeto: Fazer a responsividade pelo media queries
 
