@@ -1,5 +1,5 @@
 var nome =["Igor", "José", "Maria"]; // Definindo a lista
-var notasA = [7.0, 6.0, 9,5]; // Definindo uma nova lista alinhado coms os indices da primeira lista
+var notasA = [7.0, 6.0, 9,5]; // Definindo uma nova lista alinhado com os indices da primeira lista
 var notasB = [8.0, 7.0, 8.5]; // Idem
 
 function media(n1, n2){
