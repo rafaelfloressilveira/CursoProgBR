@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function loaded() { //função para que seja feita depois do body ser carregado
+            let t = document.getElementById("titulo")
+
+            t.addEventListener("mouseover", mudarText) // Inicia função "mudarText" após o evento "mouseover"
+            t.addEventListener("mouseout", mouseout) // Inicia função "mouseout" após o evento "mouseout"
+        }
+
+        function mudarText() { // Função para mudar o texto do elemento (this)
+            this.innerHTML = "Novo Texto";
+        }
+
+        function mouseout() { // Função para mudar o texto do elemento (this)
+            this.innerHTML = "Mouse fora do elemento";
+        }
+
+
+    </script>
+</head>
+<body onload="loaded()">  <!--Colocarmos o evento onload (Quando carregado), efetua a função loaded que está no script-->
+
+    <h1 id="titulo">Título</h1>
+ 
+</body >
+</html>
