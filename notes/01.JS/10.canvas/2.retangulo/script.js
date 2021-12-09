@@ -20,7 +20,7 @@ let ctx3= tela.getContext("2d"); // Existe o 3D, mas pouco utilizado
 ctx3.rect(40, 40, 10, 15) // Cria o retângulo com as coordenadas
 
 ctx3.fillStyle = "blue"; // Definição da cor preenchimento
-ctx3.lineWidth = 2; // Aumentar o tamenho da borda (linha)
+ctx3.lineWidth = 2; // Aumentar o tamanho da borda (linha)
 ctx3.strokeRect = "red"; // Definição da cor das linhas
 
 ctx3.fill(); // execução do preenchimento
