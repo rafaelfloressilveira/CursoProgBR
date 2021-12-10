@@ -19,3 +19,35 @@ h1 {
     display: inline-block;
     border-radius: 15px;
 }
+
+.o {
+    position: relative;
+}
+
+
+
+.o:after {
+    position: absolute;
+    content: "\2699";
+    font-size: 80px;
+    line-height: 110px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.x {
+    position: relative;
+}
+
+.x:after {
+    position: absolute;
+    content: "\1F6E0";
+    font-size: 50px;
+    line-height: 110px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
