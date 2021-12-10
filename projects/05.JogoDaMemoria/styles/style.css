@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,11 +43,13 @@ body {
 .card_front {
     transform: rotateY(180deg);
     background-color: #101c2c;
+    image-rendering: auto;
 }
 
 .card_back {
     background-color: #05c3ff;
     display: none;
+    image-rendering: auto;
 }
 
 #gameOver {
@@ -73,7 +76,7 @@ body {
 }
 
 #gameBoard {
-    max-width: 700px;
+    max-width: 400px;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 20px;
