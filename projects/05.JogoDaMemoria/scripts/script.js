@@ -4,33 +4,16 @@ const CARD = "card";
 const ICON = "icon";
 const TURN = "turn_card";
 
-let animals = [
-    "cao",
-    "coala",
-    "coelho",
-    "elefante",
-    "gato",
-    "passaro",
-    "pato",
-    "peixe",
-    "ra",
-    "borboleta"];
-
-
-let cards = null;
-
 startGame();
 
 function startGame() {
-    cards = createCardsFromAnimals(animals);
-    shuffleCards(cards);
-    initializeCards(cards);
+    initializeCards(game.createCardsFromAnimals());
 }
 
 function initializeCards(cards) {
     let gameBoard = document.getElementById("gameBoard");
 
-    cards.forEach(card => {
+    game.cards.forEach(card => {
 
         let cardElement = document.createElement("div");
         cardElement.id = card.id;
@@ -44,8 +27,6 @@ function initializeCards(cards) {
 
     })
 
-
-
 }
 
 function createCardContent(card, cardElement) {
@@ -53,13 +34,12 @@ function createCardContent(card, cardElement) {
     createCardFace(FRONT, card, cardElement);
     createCardFace(BACK, card, cardElement);
 
-
 }
 
 function createCardFace(face, card, element) {
 
     let cardElementFace = document.createElement("div");
-    cardElementFace.classList.add();
+    cardElementFace.classList.add(face);
     if(face === FRONT) {
         let iconElement = document.createElement('img');
         iconElement.classList.add(ICON);
@@ -69,51 +49,9 @@ function createCardFace(face, card, element) {
         let turnElement = document.createElement('img');
         turnElement.classList.add(TURN);
         turnElement.src = "./images/memoria.png";
+        cardElementFace.appendChild(turnElement);
     }
     element.appendChild(cardElementFace);
-}
-
-function shuffleCards(cards) {
-    let currentIndex = cards.length;
-    let randomIndex = 0;
-
-    while(currentIndex !== 0) {
-
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [cards[randomIndex]], cards[currentIndex] = cards[currentIndex], [cards[randomIndex]]
-    }
-}
-
-function createCardsFromAnimals(animals) {
-
-    let cards = [];
-    
-    animals.forEach((animals) => {
-        cards.push(createPairFromAnimals(animals));
-    })
-
-    return cards.flatMap(pair => pair);
-
-}
-
-function createPairFromAnimals(animals) {
-
-    return [{
-        id: createIdWithAnimals(animals),
-        icon: animals,
-        flipped: false,
-    },{
-        id: createIdWithAnimals(animals),
-        icon: animals,
-        flipped: false,
-    }]
-}
-
-
-function createIdWithAnimals(animals) {
-    return animals + parseInt(Math.random() * 1000);
 }
 
 function flipCard() {
