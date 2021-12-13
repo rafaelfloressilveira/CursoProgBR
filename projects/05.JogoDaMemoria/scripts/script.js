@@ -55,10 +55,11 @@ function createCardFace(face, card, element) {
 }
 
 function flipCard() {
-
+    
     if(game.setCard(this.id)){
         
         this.classList.add("flip");
+        if(game.secondCard){
         if(game.checkMatch()) {
             game.clearCards();
         } else {
@@ -69,8 +70,9 @@ function flipCard() {
 
             firstCardView.classList.remove("flip");
             secondCardView.classList.remove("flip");
-            game.clearCards();
+            game.unflipCards();
             }, 400);
         };
+        }
     }
 }
