@@ -4,8 +4,5 @@
 
 ## Desafios do projeto:
 
-- [ ] XXX
-- [ ] XXX
-- [ ] XXX
-- [ ] XXX
+- [ ] Criar um contador de movimentos para mostrar no final do jogo
 
